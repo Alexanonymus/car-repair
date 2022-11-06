@@ -15,8 +15,16 @@ body{
     width: 1200px;
     margin: 0 auto;
 }
+
+/* HEADER AREA */
 .header{
-    background-color: #000;
+    /* background-color: #000; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 3;
 }
 
 .header__wrapper{
@@ -29,9 +37,17 @@ body{
 
 /* logo block */
 
-.logo__block{
+.header__block{
     width: 20%;
-    text-align: left;
+    
+}
+
+.header__logo{
+    display: inline-block;
+}
+
+.header__logo img{
+    height: 55px;
 }
 
 /* logo block end */
@@ -90,10 +106,6 @@ body{
 
 
 /* lang block */
-.header__block{
-    width: 20%;
-    text-align: right;
-}
 
 .header__lang{
     display: flex;
@@ -103,6 +115,7 @@ body{
 
 .header__lang_link{
     margin-right: 8px;
+    transition: color .2s ease;
 
 
     color: #B7B7B7;
@@ -119,10 +132,91 @@ body{
     color:#fff;
 }
 
-
+.header__lang_link:hover{
+    color: #fff;
+}
 
 /* lang block end */
 
+/* HEADER AREA END */
 
 
+/* INTRO AREA */
+
+.intro{
+    background-image: url(../img/bg_intro.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+.intro::after{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: #000;
+    opacity: .2;
+    content: '';
+}
+
+
+
+
+
+
+.intro__content{
+    height: 790px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+
+}
+
+.intro__title{
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    max-width: 750px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    background-color: #DB2512;
+    min-width: 200px;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: background-color .2s ease;
+    border-radius: 3px;
+}
+.btn:hover{
+    background-color: #a61302;
+}
+
+
+/* Buttons end */
+
+
+
+
+/* INTRO AREA END*/
 
